@@ -1,0 +1,60 @@
+<div class="small-8">
+
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="title" class="right inline">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.title"/>
+                <span class="required">(required)</span>
+            </label>
+        </div>
+        <div class="small-9 columns">
+            <f:form.textfield property="title"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="isbn" class="right inline">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.isbn"/>
+            </label>
+        </div>
+        <div class="small-9 columns">
+            <f:form.textfield property="isbn"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="cost" class="right inline">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.cost"/>
+            </label>
+        </div>
+        <div class="small-9 columns">
+            <f:form.textfield property="cost"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="pages" class="right inline">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.pages"/>
+            </label>
+        </div>
+        <div class="small-9 columns">
+            <f:form.textfield property="pages"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="author" class="right inline">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.author"/>
+            </label>
+        </div>
+        <div class="small-9 columns">
+            <f:form.select property="author" options="{authors}" optionLabelField="name" optionValueField="uid" />
+        </div>
+    </div>
+
+
+</div>

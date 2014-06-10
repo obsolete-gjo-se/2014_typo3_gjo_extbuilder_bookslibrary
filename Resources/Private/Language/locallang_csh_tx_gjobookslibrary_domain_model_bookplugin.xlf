@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-11T09:57:12Z" product-name="gjo_bookslibrary">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Titel gjo_books</source>
+			</trans-unit>
+			<trans-unit id="isbn.description">
+				<source>ISBN</source>
+			</trans-unit>
+			<trans-unit id="cost.description">
+				<source>Preis</source>
+			</trans-unit>
+			<trans-unit id="pages.description">
+				<source>Seitenzahl</source>
+			</trans-unit>
+			<trans-unit id="author.description">
+				<source>Der Autor</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

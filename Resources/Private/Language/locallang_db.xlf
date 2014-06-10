@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-11T09:57:12Z" product-name="gjo_books">
+		<header/>
+		<body>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin">
+				<source>Bücher</source>
+			</trans-unit>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin.title">
+				<source>Book _db</source>
+			</trans-unit>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin.isbn">
+				<source>Isbn</source>
+			</trans-unit>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin.cost">
+				<source>Cost</source>
+			</trans-unit>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin.pages">
+				<source>Pages</source>
+			</trans-unit>
+			<trans-unit id="tx_gjobookslibrary_domain_model_bookplugin.author">
+				<source>Author</source>
+			</trans-unit>
+
+            <trans-unit id="tx_gjobookslibrary_domain_model_authorplugin">
+                <source>Autoren</source>
+            </trans-unit>
+            <trans-unit id="tx_gjobookslibrary_domain_model_authorplugin.title">
+                <source>Author _db </source>
+            </trans-unit>
+            <trans-unit id="tx_gjobookslibrary_domain_model_authorplugin.books">
+                <source>AuthorBooks _db </source>
+            </trans-unit>
+            <trans-unit id="tx_gjobookslibrary_domain_model_authorplugin.name">
+                <source>Name aus _db</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

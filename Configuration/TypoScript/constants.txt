@@ -1,0 +1,14 @@
+plugin.tx_gjobookslibrary {
+	view {
+		# cat=plugin.tx_gjobooks/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:gjo_bookslibrary/Resources/Private/Templates/
+		# cat=plugin.tx_gjobooks/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:gjo_bookslibrary/Resources/Private/Partials/
+		# cat=plugin.tx_gjobooks/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:gjo_bookslibrary/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_gjobooks//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

@@ -1,0 +1,14 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h1>Single View for Authors</h1>
+
+    <f:render partial="AuthorPlugin/Properties" arguments="{author:author}"/>
+
+    <f:link.action action="list">Back to list</f:link.action>
+    <br/>
+    <f:link.action action="new">New Author</f:link.action>
+    <br/>
+    <f:link.action action="edit" arguments="{author : author}">Edit</f:link.action>
+
+</f:section>

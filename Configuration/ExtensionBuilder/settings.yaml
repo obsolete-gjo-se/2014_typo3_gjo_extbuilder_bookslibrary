@@ -1,0 +1,31 @@
+overwriteSettings:
+  Classes:
+    Controller:
+      BookPluginController.php: keep
+      AuthorPluginController.php: keep
+    Domain:
+      Model:
+        BookPlugin.php: keep
+        AuthorPlugin.php: keep
+      Repository:
+        BookPluginRepository: keep
+        AuthorPluginRepository: keep
+
+  Configuration:
+    TCA:
+      BookPlugin.php: keep
+      AuthorPlugin.php: keep
+    TypoScript: keep
+
+  Resources:
+    Private:
+      Language: keep
+      Templates: keep
+
+  ext_icon.gif: keep
+
+  ext_emconf.php: keep
+  ext_localconf.php: keep
+
+  ext_tables.php: keep
+  ext_tables.sql: keep

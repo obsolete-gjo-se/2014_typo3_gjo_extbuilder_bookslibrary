@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://fluidtypo3.org/schemas/fluid-master.xsd"
+      f:schemaLocation="http://fluidtypo3.org/schemas/fluid-master.xsd ">
+<head>
+    <title>Partials: MyPartial</title>
+</head>
+<body>
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <h1>Author Lists</h1>
+
+    <f:flashMessages/>
+
+    <f:for each="{authors}" as="author">
+
+        <f:debug>{author}</f:debug>
+
+        <f:for each="{author.books}" as="book" iteration="i">
+
+            <f:debug>{i.cycle}</f:debug>
+
+
+        </f:for>
+
+
+    </f:for>
+
+    <ul>
+        <f:for each="{0:1, 1:2, 2:3, 3:4}" as="foo" iteration="fooIterator">
+            <li>Index: {fooIterator.index} Cycle: {fooIterator.cycle} Total: {fooIterator.total}{f:if(condition: fooIterator.isEven, then: ' Even')}{f:if(condition:
+                fooIterator.isOdd, then: ' Odd')}{f:if(condition: fooIterator.isFirst, then: ' First')}{f:if(condition: fooIterator.isLast, then: ' Last')}
+            </li>
+        </f:for>
+    </ul>
+
+    <table width="100%">
+        <thead>
+        <tr>
+            <th width="70%">
+                <f:translate key="tx_gjobookslibrary_domain_model_authorplugin.name"/>
+            </th>
+            <th width="15%"></th>
+            <th width="15%"></th>
+        </tr>
+        </thead>
+        <f:for each="{authors}" as="author">
+            <tr>
+                <td>
+                    <f:link.action action="show" arguments="{author : author}"> {author.name}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="edit" arguments="{author : author}">Edit</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="delete" arguments="{author : author}">Delete</f:link.action>
+                </td>
+            </tr>
+
+            <f:if condition="{author.books}">
+
+                <tr>
+                    <td colspan="3">
+                        <table width="90%">
+                            <thead>
+                            <tr>
+                                <th width="70%">
+                                    <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.title"/>
+                                </th>
+                                <th width="15%"></th>
+                                <th width="15%"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <f:for each="{author.books}" as="book">
+                                <tr>
+                                    <td>
+                                        <f:link.action pageUid="20" controller="BookPlugin" action="show"
+                                                       arguments="{book : book}"> {author.booksRelation.title}
+                                        </f:link.action>
+                                    </td>
+                                    <td>
+                                        <f:link.action action="edit" controller="BookPlugin" pageUid="20"
+                                                       arguments="{book:book, redirectConfig:{action:'list', controller:'AuthorPlugin', pageUid: '24'}}">
+                                            Edit Book
+                                        </f:link.action>
+                                        <f:link.action action="delete" controller="BookPlugin" pageUid="20"
+                                                       arguments="{book:book, redirectConfig:{action:'list', controller:'AuthorPlugin', pageUid: '24'}}">Delete
+                                        </f:link.action>
+                                    </td>
+                                </tr>
+                            </f:for>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </f:if>
+        </f:for>
+    </table>
+
+    <f:link.action action="new" controller="AuthorPlugin" pageUid="24"
+                   arguments="{author:author, redirectConfig:{action:'list', controller:'AuthorPlugin', pageUid: '24'}}">New
+    </f:link.action>
+
+</f:section>
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h1>Book Lists</h1>
+
+    <f:flashMessages/>
+
+    <f:debug>{books.1.title}</f:debug>
+
+    <table>
+        <thead>
+        <tr>
+            <th width="30%">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.title"/>
+            </th>
+            <th width="30%">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.isbn"/>
+            </th>
+            <th width="10%">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.cost"/>
+            </th>
+            <th width="10%">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.pages"/>
+            </th>
+            <th width="10%">
+                <f:translate key="tx_gjobookslibrary_domain_model_bookplugin.author"/>
+            </th>
+            <th width="10%"></th>
+            <th width="10%"></th>
+        </tr>
+        </thead>
+        <f:for each="{books}" as="book">
+            <tr>
+                <td>
+                    <f:link.action action="show" arguments="{book : book}"> {book.title}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{book : book}"> {book.isbn}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{book : book}"> {book.cost}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{book : book}"> {book.pages}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="show" arguments="{book : book}"> {book.author.name}</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="edit" arguments="{book : book}">Edit</f:link.action>
+                </td>
+                <td>
+                    <f:link.action action="delete" arguments="{book : book}">Delete</f:link.action>
+                </td>
+            </tr>
+        </f:for>
+    </table>
+
+    <f:link.action action="new">New Book</f:link.action>
+</f:section>

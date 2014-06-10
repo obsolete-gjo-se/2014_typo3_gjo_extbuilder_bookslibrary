@@ -1,0 +1,39 @@
+plugin.tx_gjobookslibrary {
+	view {
+		templateRootPath = {$plugin.tx_gjobookslibrary.view.templateRootPath}
+		partialRootPath = {$plugin.tx_gjobookslibrary.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_gjobookslibrary.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_gjobookslibrary.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_gjobookslibrary._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-gjo-books table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-gjo-books table th {
+		font-weight:bold;
+	}
+
+	.tx-gjo-books table td {
+		vertical-align:top;
+	}
+)

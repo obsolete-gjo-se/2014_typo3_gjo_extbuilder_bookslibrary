@@ -1,0 +1,14 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <h1>Single View for Book</h1>
+
+    <f:render partial="BookPlugin/Properties" arguments="{book:book}"/>
+
+    <f:link.action action="list">Back to list</f:link.action>
+    <br/>
+    <f:link.action action="new">New Book</f:link.action>
+    <br/>
+    <f:link.action action="edit" arguments="{book : book}">Edit</f:link.action>
+
+</f:section>

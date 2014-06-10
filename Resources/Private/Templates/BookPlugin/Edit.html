@@ -1,0 +1,18 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <h1>Edit Book</h1>
+
+    <f:flashMessages/>
+
+    <f:render partial="FormErrors" arguments="{object:Book}"/>
+
+    <f:form action="update" name="book" object="{book}">
+        <div class="row">
+            <f:render partial="BookPlugin/FormFields" arguments="{book:book, authors:authors}"/>
+            <f:form.submit value="Save"/>
+        </div>
+    </f:form>
+
+</f:section>

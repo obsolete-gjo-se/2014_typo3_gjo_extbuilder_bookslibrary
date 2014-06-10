@@ -1,0 +1,22 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <h1>New Author</h1>
+
+    <f:flashMessages/>
+
+    <f:render partial="FormErrors" arguments="{object:Book}"/>
+
+    <f:form action="create" name="newAuthor" object="{newAuthor}">
+        <div class="row">
+            <f:render partial="AuthorPlugin/FormFields"/>
+            <f:form.submit value="Create new Author"/>
+        </div>
+    </f:form>
+
+</f:section>
+
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://fluidtypo3.org/schemas/fluid-master.xsd"
+      f:schemaLocation="http://fluidtypo3.org/schemas/fluid-master.xsd ">
+<head>
+    <title>Partials: MyPartial</title>
+</head>
+<body>
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+
+    <h1>Edit Author</h1>
+
+    <f:render partial="FormErrors" arguments="{object:Book}"/>
+
+    <f:form action="update" name="author" object="{author}">
+
+        <div class="row">
+            <f:render partial="AuthorPlugin/FormFields" arguments="{author:author}"/>
+            <f:form.submit value="Save aus Main Neu"/>
+        </div>
+    </f:form>
+</f:section>
+</body>
+</html>
