@@ -4,7 +4,7 @@ namespace Gjo\GjoBooks\Tests;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2014 Gregory Jo <email@gregoryjo>, emtec
+ *  (c) 2014 Gregory Jo <email@gregoryjo>
  *  			
  *  All rights reserved
  *
